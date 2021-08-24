@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:bakeneko-65-pcb-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -186,18 +185,6 @@ D-
 Text GLabel 7500 1700 0    50   Input ~ 0
 D+
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U2
-U 1 1 5F26004F
-P 2350 5400
-F 0 "U2" H 1500 4550 50  0000 C CNN
-F 1 "ATmega32U4-AU" H 1500 4450 50  0000 C CNN
-F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 2350 5400 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 2350 5400 50  0001 C CNN
-F 4 "C44854" H 2350 5400 50  0001 C CNN "LCSC Part #"
-	1    2350 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R3
 U 1 1 5F259605
 P 1100 5000
@@ -318,8 +305,6 @@ F 3 "" H 1200 5200 50  0001 C CNN
 	1    1200 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1500 5200 1750 5200
 $Comp
 L power:GND #PWR022
 U 1 1 5F28CFBC
@@ -440,7 +425,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 5400 5500 5400
 $Comp
-L Connector:AVR-ISP-6 J2
+L bakeneko-65-pcb-rescue:AVR-ISP-6-Connector J2
 U 1 1 5F4C9CCE
 P 4600 1650
 F 0 "J2" H 4271 1746 50  0000 R CNN
@@ -475,40 +460,6 @@ Text GLabel 2950 4000 2    50   Input ~ 0
 SCK
 Text GLabel 2950 4100 2    50   Input ~ 0
 MOSI
-Text GLabel 2950 5100 2    50   Input ~ 0
-COL15
-Text GLabel 2950 5200 2    50   Input ~ 0
-COL14
-Text GLabel 2950 5300 2    50   Input ~ 0
-COL13
-Text GLabel 2950 5400 2    50   Input ~ 0
-COL12
-Text GLabel 2950 5600 2    50   Input ~ 0
-COL11
-Text GLabel 2950 5500 2    50   Input ~ 0
-COL10
-Text GLabel 2950 5700 2    50   Input ~ 0
-COL9
-Text GLabel 2950 5800 2    50   Input ~ 0
-COL8
-Text GLabel 2950 4300 2    50   Input ~ 0
-COL7
-Text GLabel 2950 4400 2    50   Input ~ 0
-COL6
-Text GLabel 2950 4500 2    50   Input ~ 0
-COL5
-Text GLabel 2950 4800 2    50   Input ~ 0
-COL4
-Text GLabel 2950 3900 2    50   Input ~ 0
-COL1
-Text GLabel 2950 6700 2    50   Input ~ 0
-COL0
-Text GLabel 2950 4600 2    50   Input ~ 0
-ROW1
-Text GLabel 2950 6800 2    50   Input ~ 0
-ROW2
-Text GLabel 2950 6100 2    50   Input ~ 0
-ROW0
 Wire Wire Line
 	5400 3800 5400 3650
 Wire Wire Line
@@ -519,9 +470,6 @@ Wire Wire Line
 Wire Wire Line
 	5400 4250 5400 4100
 Connection ~ 5000 4250
-Text GLabel 2950 4900 2    50   Input ~ 0
-COL3
-NoConn ~ 2950 6300
 $Comp
 L power:GND #PWR02
 U 1 1 5F253A4B
@@ -613,19 +561,6 @@ U 5F45B9B8
 F0 "Switch Matrix" 50
 F1 "matrix.sch" 50
 $EndSheet
-Wire Wire Line
-	2150 3600 2250 3600
-Wire Wire Line
-	2150 7200 2250 7200
-Wire Wire Line
-	2350 3600 2450 3600
-Wire Wire Line
-	2250 3600 2350 3600
-Connection ~ 2250 3600
-Connection ~ 2350 3600
-Wire Wire Line
-	2350 7200 2250 7200
-Connection ~ 2250 7200
 $Comp
 L power:+5V #PWR0107
 U 1 1 5F7CE4F4
@@ -637,20 +572,10 @@ F 3 "" H 1750 4700 50  0001 C CNN
 	1    1750 4700
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1250 4900 1750 4900
-Wire Wire Line
-	1250 5000 1750 5000
 Text Label 1350 4900 0    50   ~ 0
 MCU_D+
 Text Label 1350 5000 0    50   ~ 0
 MCU_D-
-Text GLabel 2950 6400 2    50   Input ~ 0
-COL2
-Text GLabel 2950 6600 2    50   Input ~ 0
-ROW4
-Text GLabel 2950 6500 2    50   Input ~ 0
-ROW3
 $Comp
 L Power_Protection:SRV05-4 U1
 U 1 1 60A1FB39
@@ -697,4 +622,77 @@ Wire Wire Line
 	6600 2800 6450 2800
 Wire Wire Line
 	6150 2800 6000 2800
+Connection ~ 2250 7200
+Connection ~ 2250 3600
+Connection ~ 2350 3600
+Text GLabel 2950 6300 2    50   Input ~ 0
+ROW4
+Wire Wire Line
+	1500 5200 1750 5200
+Wire Wire Line
+	2150 7200 2250 7200
+Wire Wire Line
+	1250 4900 1750 4900
+Wire Wire Line
+	1250 5000 1750 5000
+Wire Wire Line
+	2350 3600 2450 3600
+Wire Wire Line
+	2150 3600 2250 3600
+Wire Wire Line
+	2350 7200 2250 7200
+Wire Wire Line
+	2250 3600 2350 3600
+$Comp
+L bakeneko-65-pcb-rescue:ATmega32U4-AU-MCU_Microchip_ATmega U2
+U 1 1 5F26004F
+P 2350 5400
+F 0 "U2" H 1500 4550 50  0000 C CNN
+F 1 "ATmega32U4-AU" H 1500 4450 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 2350 5400 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 2350 5400 50  0001 C CNN
+F 4 "C44854" H 2350 5400 50  0001 C CNN "LCSC Part #"
+	1    2350 5400
+	1    0    0    -1  
+$EndComp
+Text GLabel 2950 3900 2    50   Input ~ 0
+COL0
+Text GLabel 2950 5100 2    50   Input ~ 0
+COL1
+Text GLabel 2950 5200 2    50   Input ~ 0
+COL2
+Text GLabel 2950 5300 2    50   Input ~ 0
+COL3
+Text GLabel 2950 5400 2    50   Input ~ 0
+COL4
+Text GLabel 2950 5600 2    50   Input ~ 0
+COL5
+Text GLabel 2950 4600 2    50   Input ~ 0
+COL6
+Text GLabel 2950 5700 2    50   Input ~ 0
+ROW3
+Text GLabel 2950 5800 2    50   Input ~ 0
+COL8
+Text GLabel 2950 4300 2    50   Input ~ 0
+ROW0
+Text GLabel 2950 4400 2    50   Input ~ 0
+ROW2
+Text GLabel 2950 4500 2    50   Input ~ 0
+ROW1
+Text GLabel 2950 4800 2    50   Input ~ 0
+COL9
+Text GLabel 2950 6400 2    50   Input ~ 0
+COL15
+Text GLabel 2950 6500 2    50   Input ~ 0
+COL14
+Text GLabel 2950 6600 2    50   Input ~ 0
+COL13
+Text GLabel 2950 6700 2    50   Input ~ 0
+COL12
+Text GLabel 2950 6800 2    50   Input ~ 0
+COL11
+Text GLabel 2950 4900 2    50   Input ~ 0
+COL10
+Text GLabel 2950 5500 2    50   Input ~ 0
+COL7
 $EndSCHEMATC

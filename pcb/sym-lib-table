@@ -7,4 +7,6 @@
   (lib (name Power_Protection)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Power_Protection.lib)(options "")(descr ""))
   (lib (name Switch)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Switch.lib)(options "")(descr ""))
   (lib (name Connector)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Connector.lib)(options "")(descr ""))
+  (lib (name kbd)(type Legacy)(uri ${KIPRJMOD}/kbd/kicad-symbols/kbd.lib)(options "")(descr ""))
+  (lib (name MX_Alps_Hybrid)(type Legacy)(uri "${KIPRJMOD}/MX_Alps_Hybrid/Schematic Library/MX_Alps_Hybrid.lib")(options "")(descr ""))
 )
